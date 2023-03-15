@@ -1,7 +1,17 @@
 <div class="d-flex align-items-center justify-content-center">
 <h1>Welcome to Scheduled Tweets</h1>
 
+
+</div>
+
 <% if @user %>
    Logged in as: <%= @user.email %>
+
+    <%
+=begin%>
+  One option, but button is the most semantic
+ <%= link_to "Logout", logout_path, method: :delete %> 
+<%
+=end%>
+    <%= button_to "Logout", logout_path, method: :delete %>
 <% end %>
-</div>
